@@ -5,7 +5,7 @@ Summary(pl):	Statystyczne analizy mikrotablicowe
 Name:		R-cran-%{modulename}
 Version:	0.5.14
 Release:	1
-License:	GPL version 2 or newer
+License:	GPL v2+
 Group:		Applications/Math
 Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	b669496897c520eb0a78ff62c647f3ef
@@ -21,7 +21,7 @@ The package contains some simple functions for exploratory microarray
 analysis.
 
 %description -l pl
-Pakiet zawiera proste funkcje do wyja¶niania analiz mikrotablicowych.
+Pakiet zawiera proste funkcje do wstêpnej analizy mikrotablicowej.
 
 %prep
 %setup -q -c
