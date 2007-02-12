@@ -1,7 +1,7 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	sma
 Summary:	Statistical Microarray Analysis
-Summary(pl):	Statystyczne analizy mikrotablicowe
+Summary(pl.UTF-8):   Statystyczne analizy mikrotablicowe
 Name:		R-cran-%{modulename}
 Version:	0.5.14
 Release:	2
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The package contains some simple functions for exploratory microarray
 analysis.
 
-%description -l pl
-Pakiet zawiera proste funkcje do wstêpnej analizy mikrotablicowej.
+%description -l pl.UTF-8
+Pakiet zawiera proste funkcje do wstÄ™pnej analizy mikrotablicowej.
 
 %prep
 %setup -q -c
