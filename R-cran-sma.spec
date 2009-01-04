@@ -10,8 +10,8 @@ Group:		Applications/Math
 Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	b669496897c520eb0a78ff62c647f3ef
 URL:		http://www.stat.berkeley.edu/users/terry/zarray/Html/smacode.html
-BuildRequires:	R-base >= 2.4.0
-Requires(post,postun):	R-base >= 2.4.0
+BuildRequires:	R >= 2.8.1
+Requires(post,postun):	R >= 2.8.1
 Requires(post,postun):	perl-base
 Requires(post,postun):	textutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
