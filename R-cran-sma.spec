@@ -1,13 +1,15 @@
+# NOTE: dead upstream (last release 2005), incompatible with R >= 3.0 (no NAMESPACE file)
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	sma
+%undefine	_debugsource_packages
 Summary:	Statistical Microarray Analysis
 Summary(pl.UTF-8):	Statystyczne analizy mikrotablicowe
 Name:		R-cran-%{modulename}
 Version:	0.5.14
-Release:	2
+Release:	2.1
 License:	GPL v2+
 Group:		Applications/Math
-Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
+Source0:	https://cran.r-project.org/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	b669496897c520eb0a78ff62c647f3ef
 URL:		http://www.stat.berkeley.edu/users/terry/zarray/Html/smacode.html
 BuildRequires:	R >= 2.8.1
@@ -31,6 +33,7 @@ R CMD build %{modulename}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_libdir}/R/library
 R CMD INSTALL %{modulename} --library=$RPM_BUILD_ROOT%{_libdir}/R/library/
 
 %clean
